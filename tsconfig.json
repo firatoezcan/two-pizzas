@@ -19,7 +19,8 @@
     "skipLibCheck": true,
     "strict": true,
     "target": "esnext",
-    "noImplicitAny": false
+    "noImplicitAny": false,
+    "baseUrl": ".",
   },
   "typeAcquisition": {
     "enable": true
