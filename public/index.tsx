@@ -1,13 +1,16 @@
+import React from 'react'
 import hydrate from "preact-iso/hydrate";
 import { LocationProvider, Router } from "preact-iso/router";
 import lazy, { ErrorBoundary } from "preact-iso/lazy";
 import Home from "./pages/home/index";
 import NotFound from "./pages/_404";
 import Header from "./header";
+import { PricingPage } from "./tailwindui/pricing";
 
 const About = lazy(() => import("./pages/about/index"));
 
 export function App() {
+  return <PricingPage />
   return (
     <LocationProvider>
       <div class="app">

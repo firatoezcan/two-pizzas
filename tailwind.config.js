@@ -25,6 +25,8 @@ module.exports = {
       indigo: colors.indigo,
       purple: colors.violet,
       pink: colors.pink,
+
+      orange: colors.orange
     },
     spacing: {
       px: '1px',
@@ -850,5 +852,6 @@ module.exports = {
     wordBreak: ['responsive'],
     zIndex: ['responsive', 'focus-within', 'focus'],
   },
-  plugins: [],
+  plugins: [require('@tailwindcss/forms'),
+  require('@tailwindcss/aspect-ratio')],
 }
