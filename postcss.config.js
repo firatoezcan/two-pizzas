@@ -1,7 +1,6 @@
 const plugins = {
   tailwindcss: {},
   autoprefixer: {},
-
 }
 
 const productionPlugins = {
@@ -9,6 +8,7 @@ const productionPlugins = {
     content: [
       './public/pages/**/*.{ts,tsx}',
       './public/components/**/*.{ts,tsx}',
+      './public/index.html'
     ],
     defaultExtractor: content => content.match(/[\w-/:]+(?<!:)/g) || [],
   },
