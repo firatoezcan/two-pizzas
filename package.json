@@ -1,0 +1,34 @@
+{
+  "scripts": {
+    "generate-styles": "find ./public/styles -name \"*.css\" ! -name \"_*\" -type f -printf \"%p \" | xargs cat | yarn run postcss | sed -e '1d' > public/styles/generated.css",
+    "start": "yarn run generate-styles; NODE_OPTIONS='--inspect' wmr",
+    "build": "NODE_ENV='production' yarn run generate-styles; wmr build --prerender",
+    "serve": "wmr serve"
+  },
+  "eslintConfig": {
+    "extends": "preact"
+  },
+  "alias": {
+    "react": "preact/compat",
+    "react-dom": "preact/compat"
+  },
+  "dependencies": {
+    "@headlessui/react": "^0.2.0",
+    "classnames": "^2.2.6",
+    "heroicons-react": "^1.3.0",
+    "preact-iso": "^0.2.0"
+  },
+  "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^3.0.0",
+    "@tailwindcss/forms": "^0.2.1",
+    "@types/react": "^17.0.0",
+    "autoprefixer": "^10.1.0",
+    "cssnano": "^4.1.10",
+    "postcss": "^8.2.1",
+    "postcss-cli": "^8.3.0",
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "^2.0.1",
+    "wmr": "^1.0.0"
+  },
+  "license": "MIT"
+}
