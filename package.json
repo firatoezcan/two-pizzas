@@ -2,7 +2,7 @@
   "scripts": {
     "generate-styles": "find ./public/styles -name \"*.css\" ! -name \"_*\" -type f -printf \"%p \" | xargs cat | yarn run postcss | sed -e '1d' > public/styles/generated.css",
     "start": "yarn run generate-styles; NODE_OPTIONS='--inspect' wmr",
-    "build": "NODE_ENV='production' yarn run generate-styles; wmr build --prerender",
+    "build": "NODE_ENV='production' yarn run generate-styles & rm -rf dist;wait; wmr build --prerender",
     "serve": "wmr serve"
   },
   "eslintConfig": {
