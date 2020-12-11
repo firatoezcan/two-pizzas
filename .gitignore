@@ -2,3 +2,6 @@ generated*.*
 node_modules
 .cache
 dist
+
+# Always different anyways because we dont use docker locally lol. Don't want to play lock ping-pong
+yarn.lock
